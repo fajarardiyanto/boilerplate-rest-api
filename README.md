@@ -13,3 +13,13 @@ git clone https://github.com/fajarardiyanto/boilerplate-rest-api.git
 ```bash
 make run
 ```
+
+### Build Docker
+```bash
+make docker-build
+```
+
+### Run Docker
+```bash
+make build-run
+```

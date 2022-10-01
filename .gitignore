@@ -6,3 +6,4 @@ tmp/
 run.sh
 sqlservertest
 external/config/config.yaml
+*.app
