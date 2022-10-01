@@ -21,13 +21,13 @@ func Start() {
 	)
 
 	// Service
-	helloSvc := service.NewHelloService()
+	healthSvc := service.NewHealthInfoService()
 
 	// Handler
-	helloHandler := handler.NewHelloHandler(helloSvc)
+	healthHandler := handler.NewHealthInfoHandler(healthSvc)
 
 	// router
-	router.GET("", helloHandler.Hello)
+	router.GET("/health-info", healthHandler.HealthInfo)
 
 	router.Run(dto.GetConfig().Port)
 }

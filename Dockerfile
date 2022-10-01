@@ -19,7 +19,7 @@ RUN mkdir /build
 
 WORKDIR /build
 
-ENTRYPOINT ["./hello-service.app"]
+ENTRYPOINT ["./health-service.app"]
 
 LABEL org.opencontainers.image.created="${BUILD_DATE}" \
    org.opencontainers.image.revision="${BUILD_VERSION}"
