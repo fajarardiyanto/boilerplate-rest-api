@@ -2,5 +2,5 @@ tidy:
 	@go mod tidy
 test:
 	@go test -v ./...
-make run:
+run:
 	@go run ./cmd .
