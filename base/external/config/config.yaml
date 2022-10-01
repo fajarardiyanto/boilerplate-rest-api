@@ -1,0 +1,15 @@
+version: v1.0.0
+name: App Name
+port: 8080
+mysql:
+  enable: true
+  driver: mysql
+  host: 127.0.0.1
+  port: 3334
+  username: root
+  password: root
+  database: warpin
+  autoReconnect: true
+  startInterval: 2 #second
+  maxError: 5
+  timeoutConnection: 5000 #milisecond

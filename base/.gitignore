@@ -1,9 +1,7 @@
-.idea/
+../.idea/
 .vscode/
 libs/
 bin/
 tmp/
 run.sh
 sqlservertest
-external/config/config.yaml
-*.app

@@ -7,7 +7,7 @@ WORKDIR /build
 COPY go.* ./
 RUN go mod download
 
-COPY . .
+COPY .. .
 
 RUN make build
 
