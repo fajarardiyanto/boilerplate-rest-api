@@ -21,9 +21,11 @@
 ### Usage
 ```shell
 ./rest-api-generator --pkg testing --appName testing-name --modules mysql,redis,mongo
+```
 
 or 
 
+```shell
 ./rest-api-generator --pkg testing --appName testing-name --modules mysql --modules redis --modules mongo
 ```
 
