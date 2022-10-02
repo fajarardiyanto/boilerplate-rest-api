@@ -19,15 +19,16 @@
 | mongo |
 
 ### Usage
+move file **rest-api-generator** to your folder project or folder /bin
+
 ```shell
 ./rest-api-generator --pkg testing --appName testing-name --modules mysql,redis,mongo
 ```
-
-or 
-
+or
 ```shell
 ./rest-api-generator --pkg testing --appName testing-name --modules mysql --modules redis --modules mongo
 ```
+<br />
 
 ```shell
 cd testing && make run
