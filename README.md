@@ -16,10 +16,6 @@
 ```
 
 ```shell
-make tidy
-```
-
-```shell
 make run
 ```
 

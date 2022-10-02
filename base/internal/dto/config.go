@@ -8,10 +8,12 @@ import (
 var cfg = new(Config)
 
 type Config struct {
-	Version string               `yaml:"version"`
-	Name    string               `yaml:"name"`
-	Port    string               `yaml:"port"`
-	Mysql   interfaces.SQLConfig `yaml:"mysql"`
+	Version  string `yaml:"version"`
+	Name     string `yaml:"name"`
+	Port     string `yaml:"port"`
+	Database struct {
+		Mysql interfaces.SQLConfig `yaml:"mysql"`
+	} `yaml:"database"`
 }
 
 func init() {

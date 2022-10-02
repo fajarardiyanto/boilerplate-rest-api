@@ -14,7 +14,7 @@ func Init() {
 	db := databaseLib.NewLib()
 	db.Init(GetLogger())
 
-	database = db.LoadSQLDatabase(dto.GetConfig().Mysql)
+	database = db.LoadSQLDatabase(dto.GetConfig().Database.Mysql)
 
 	if err := database.LoadSQL(); err != nil {
 		logger.Error(err).Quit()

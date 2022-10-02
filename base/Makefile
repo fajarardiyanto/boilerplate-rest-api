@@ -4,7 +4,7 @@ download:
 	@go mod download
 test:
 	@go test -v ./...
-run:
+run: tidy
 	@go run ./cmd .
 build:
 	@go build \

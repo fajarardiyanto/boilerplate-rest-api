@@ -22,6 +22,7 @@ func (h *healthInfoHandler) HealthInfo(w http.ResponseWriter, r *http.Request) e
 	return interfaces.JSON(w, http.StatusOK, dto.ResponseHealthInfo{
 		ServiceName:    dto.GetConfig().Name,
 		ServiceVersion: dto.GetConfig().Version,
+		Compiler:       h.svc.BuildInfo(),
 		Database: dto.Database{
 			Mysql: h.svc.HealthInfoDatabase(),
 		},

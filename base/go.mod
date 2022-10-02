@@ -8,6 +8,7 @@ require (
 	github.com/fajarardiyanto/flt-go-router v0.0.3
 	github.com/fajarardiyanto/flt-go-utils v0.0.9
 	github.com/pkg/errors v0.9.1
+	github.com/shirou/gopsutil/v3 v3.22.8
 )
 
 require (
@@ -41,7 +42,6 @@ require (
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/shirou/gopsutil/v3 v3.22.8 // indirect
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
 	github.com/tklauser/numcpus v0.4.0 // indirect
 	github.com/urfave/cli/v2 v2.16.3 // indirect
