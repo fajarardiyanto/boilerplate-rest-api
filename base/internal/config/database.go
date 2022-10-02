@@ -9,6 +9,7 @@ import (
 var (
 	database databaseinterface.SQL
 	rdb      databaseinterface.Redis
+	mongoDB  databaseinterface.Mongo
 )
 
 func Init() {
@@ -17,6 +18,7 @@ func Init() {
 
 	InitMysql(db)
 	InitRedis(db)
+	InitMongo(db)
 }
 
 func InitMysql(db databaseinterface.Database) {
@@ -36,10 +38,23 @@ func InitRedis(db databaseinterface.Database) {
 	}
 }
 
+func InitMongo(db databaseinterface.Database) {
+	mongoDB = db.LoadMongoDatabase(dto.GetConfig().Database.Mongo)
+
+	if err := mongoDB.Init(); err != nil {
+		logger.Error(err)
+		return
+	}
+}
+
 func GetDBConn() databaseinterface.SQL {
 	return database
 }
 
 func GetRdbConn() databaseinterface.Redis {
 	return rdb
+}
+
+func GetMongoConn() databaseinterface.Mongo {
+	return mongoDB
 }

@@ -39,3 +39,11 @@ func (*service) HealthInfoRedis() bool {
 
 	return true
 }
+
+func (*service) HealthInfoMongo() bool {
+	if err := config.GetMongoConn().Init(); err != nil {
+		return false
+	}
+
+	return true
+}

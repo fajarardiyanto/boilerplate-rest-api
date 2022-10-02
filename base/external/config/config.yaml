@@ -21,3 +21,13 @@ database:
     autoReconnect: true
     startInterval: 2
     maxError: 5
+  mongo:
+    enable: true
+    host: 127.0.0.1
+    port: 27017
+    username: admin
+    password: secret
+    autoReconnect: true
+    startInterval: 2 #second
+    maxError: 5
+    timeoutConnection: 5000 #milisecond

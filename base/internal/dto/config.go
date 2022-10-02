@@ -14,6 +14,7 @@ type Config struct {
 	Database struct {
 		Mysql interfaces.SQLConfig           `yaml:"mysql"`
 		Redis interfaces.RedisProviderConfig `yaml:"redis"`
+		Mongo interfaces.MongoProviderConfig `yaml:"mongo"`
 	} `yaml:"database"`
 }
 
