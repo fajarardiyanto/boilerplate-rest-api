@@ -9,4 +9,5 @@ type ResponseHealthInfo struct {
 
 type Database struct {
 	Mysql bool `json:"mysql"`
+	Redis bool `json:"redis"`
 }

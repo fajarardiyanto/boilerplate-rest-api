@@ -1,6 +1,6 @@
 version: v1.0.0
 name: App Name
-port: 8080
+port: 8081
 database:
   mysql:
     enable: true
@@ -14,3 +14,10 @@ database:
     startInterval: 2 #second
     maxError: 5
     timeoutConnection: 5000 #milisecond
+  redis:
+    enable: true
+    host: 127.0.0.1
+    port: 6379
+    autoReconnect: true
+    startInterval: 2
+    maxError: 5

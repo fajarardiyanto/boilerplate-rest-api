@@ -12,7 +12,8 @@ type Config struct {
 	Name     string `yaml:"name"`
 	Port     string `yaml:"port"`
 	Database struct {
-		Mysql interfaces.SQLConfig `yaml:"mysql"`
+		Mysql interfaces.SQLConfig           `yaml:"mysql"`
+		Redis interfaces.RedisProviderConfig `yaml:"redis"`
 	} `yaml:"database"`
 }
 

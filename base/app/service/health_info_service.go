@@ -31,3 +31,11 @@ func (*service) HealthInfoDatabase() bool {
 
 	return true
 }
+
+func (*service) HealthInfoRedis() bool {
+	if err := config.GetRdbConn().Init(); err != nil {
+		return false
+	}
+
+	return true
+}

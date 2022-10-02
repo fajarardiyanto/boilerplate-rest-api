@@ -25,6 +25,7 @@ func (h *healthInfoHandler) HealthInfo(w http.ResponseWriter, r *http.Request) e
 		Compiler:       h.svc.BuildInfo(),
 		Database: dto.Database{
 			Mysql: h.svc.HealthInfoDatabase(),
+			Redis: h.svc.HealthInfoRedis(),
 		},
 	})
 }
