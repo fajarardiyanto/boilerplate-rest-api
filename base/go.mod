@@ -2,13 +2,11 @@ module github.com/fajarardiyanto/boilerplate-rest-api
 
 go 1.17
 
-replace github.com/fajarardiyanto/flt-go-utils => ../../flt-go-utils
-
 require (
 	github.com/fajarardiyanto/flt-go-database v0.1.3
 	github.com/fajarardiyanto/flt-go-logger v0.0.8
 	github.com/fajarardiyanto/flt-go-router v0.0.3
-	github.com/fajarardiyanto/flt-go-utils v0.0.9
+	github.com/fajarardiyanto/flt-go-utils v0.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/shirou/gopsutil/v3 v3.22.8
 	github.com/spf13/cobra v1.5.0
