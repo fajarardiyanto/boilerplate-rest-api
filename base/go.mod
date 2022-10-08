@@ -2,6 +2,8 @@ module github.com/fajarardiyanto/boilerplate-rest-api
 
 go 1.17
 
+replace github.com/fajarardiyanto/flt-go-utils => ../../flt-go-utils
+
 require (
 	github.com/fajarardiyanto/flt-go-database v0.1.3
 	github.com/fajarardiyanto/flt-go-logger v0.0.8
@@ -9,6 +11,7 @@ require (
 	github.com/fajarardiyanto/flt-go-utils v0.0.9
 	github.com/pkg/errors v0.9.1
 	github.com/shirou/gopsutil/v3 v3.22.8
+	github.com/spf13/cobra v1.5.0
 )
 
 require (
@@ -24,6 +27,7 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/uuid v1.3.0 // indirect
+	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.12.1 // indirect
 	github.com/jackc/pgio v1.0.0 // indirect
@@ -42,6 +46,7 @@ require (
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
+	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
 	github.com/tklauser/numcpus v0.4.0 // indirect
 	github.com/urfave/cli/v2 v2.16.3 // indirect

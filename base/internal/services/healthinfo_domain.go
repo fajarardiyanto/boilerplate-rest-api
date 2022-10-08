@@ -1,9 +1,9 @@
-package service
+package services
 
 import (
 	"fmt"
-	"github.com/fajarardiyanto/boilerplate-rest-api/internal/config"
-	repo "github.com/fajarardiyanto/boilerplate-rest-api/pkg/repository/service"
+	"github.com/fajarardiyanto/boilerplate-rest-api/config"
+	"github.com/fajarardiyanto/boilerplate-rest-api/internal/repo"
 	"github.com/shirou/gopsutil/v3/host"
 )
 

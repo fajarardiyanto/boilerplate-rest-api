@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/fajarardiyanto/boilerplate-rest-api/internal/config"
+	"github.com/fajarardiyanto/boilerplate-rest-api/config"
 	"github.com/fajarardiyanto/flt-go-router/interfaces"
 	"github.com/pkg/errors"
 	"net/http"

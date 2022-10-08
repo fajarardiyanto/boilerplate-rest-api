@@ -5,3 +5,4 @@ bin/
 tmp/
 run.sh
 sqlservertest
+*.app

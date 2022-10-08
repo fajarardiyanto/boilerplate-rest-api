@@ -2,17 +2,25 @@ package config
 
 import (
 	"github.com/fajarardiyanto/boilerplate-rest-api/internal/dto"
-	databaseinterface "github.com/fajarardiyanto/flt-go-database/interfaces"
+	databaseInterface "github.com/fajarardiyanto/flt-go-database/interfaces"
 	databaseLib "github.com/fajarardiyanto/flt-go-database/lib"
+	"github.com/fajarardiyanto/flt-go-logger/interfaces"
+	"github.com/fajarardiyanto/flt-go-logger/lib"
 )
 
 var (
-	database databaseinterface.SQL
-	rdb      databaseinterface.Redis
-	mongoDB  databaseinterface.Mongo
+	logger   interfaces.Logger
+	database databaseInterface.SQL
+	rdb      databaseInterface.Redis
+	mongoDB  databaseInterface.Mongo
 )
 
-func Init() {
+func init() {
+	logger = lib.NewLib()
+	logger.Init(dto.GetConfig().Name)
+}
+
+func Config() {
 	db := databaseLib.NewLib()
 	db.Init(GetLogger())
 
@@ -21,7 +29,7 @@ func Init() {
 	InitMongo(db)
 }
 
-func InitMysql(db databaseinterface.Database) {
+func InitMysql(db databaseInterface.Database) {
 	database = db.LoadSQLDatabase(dto.GetConfig().Database.Mysql)
 
 	if err := database.LoadSQL(); err != nil {
@@ -29,7 +37,7 @@ func InitMysql(db databaseinterface.Database) {
 	}
 }
 
-func InitRedis(db databaseinterface.Database) {
+func InitRedis(db databaseInterface.Database) {
 	rdb = db.LoadRedisDatabase(dto.GetConfig().Database.Redis)
 
 	if err := rdb.Init(); err != nil {
@@ -38,7 +46,7 @@ func InitRedis(db databaseinterface.Database) {
 	}
 }
 
-func InitMongo(db databaseinterface.Database) {
+func InitMongo(db databaseInterface.Database) {
 	mongoDB = db.LoadMongoDatabase(dto.GetConfig().Database.Mongo)
 
 	if err := mongoDB.Init(); err != nil {
@@ -47,14 +55,18 @@ func InitMongo(db databaseinterface.Database) {
 	}
 }
 
-func GetDBConn() databaseinterface.SQL {
+func GetLogger() interfaces.Logger {
+	return logger
+}
+
+func GetDBConn() databaseInterface.SQL {
 	return database
 }
 
-func GetRdbConn() databaseinterface.Redis {
+func GetRdbConn() databaseInterface.Redis {
 	return rdb
 }
 
-func GetMongoConn() databaseinterface.Mongo {
+func GetMongoConn() databaseInterface.Mongo {
 	return mongoDB
 }

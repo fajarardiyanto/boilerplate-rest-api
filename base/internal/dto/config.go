@@ -8,7 +8,7 @@ import (
 var cfg = new(Config)
 
 type Config struct {
-	Version  string `yaml:"version"`
+	Version  string `yaml:"version" default:"v"`
 	Name     string `yaml:"name"`
 	Port     string `yaml:"port"`
 	Database struct {
@@ -19,7 +19,7 @@ type Config struct {
 }
 
 func init() {
-	flags.Init("external/config/config.yaml", cfg)
+	flags.Init("config/config.yaml", cfg)
 }
 
 func GetConfig() *Config {
