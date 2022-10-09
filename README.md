@@ -1,4 +1,4 @@
-# Rest Api Generator
+# Rest Api Generator V2
 
 **rest-api-generator** generates standard structure rest api application using module [flt-go-router](https://github.com/fajarardiyanto/flt-go-router).
 
